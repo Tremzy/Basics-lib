@@ -37,7 +37,7 @@ namespace MainProject{
             int n7 = Convert.ToInt32(num7);
             double cout5 = Basics.Root(n7);
             Console.WriteLine($"Your result is: {cout5}");
-            Console.WriteLine("Press any key to exit...");
+            Console.WriteLine("Press any key to exit... ");
             Console.ReadKey();
         }
     }
