@@ -26,5 +26,15 @@ namespace Basicsprogram{
             result = Math.Sqrt(x);
             return result;
         }
+        public static bool Contains(string x, char y){
+            bool result = false;
+            for(int i = 0; i < x.Length;i++){
+                char current = x[i];
+                if(current == y){
+                    result = true;
+                }
+            }
+            return result;
+        }
     }
 }
