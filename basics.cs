@@ -29,7 +29,7 @@ namespace Basicsprogram {
         public static bool Contains(string x, char y) {
             bool result = false;
             int count = 0;
-            for(int i = 0; i < x.Length;i++){
+            for(int i = 0; i < Strlen(x);i++){
                 char current = x[i];
                 if(current == y){
                     count++;
@@ -42,6 +42,16 @@ namespace Basicsprogram {
             int result;
             result = x - y;
             return result;
+        }
+        public static int HowMany(string x, char y){
+            int count = 0;
+            for(int i=0;i<Strlen(x);i++){
+                char current = x[i];
+                if(current == y){
+                    count++;
+                }
+            }
+            return count;
         }
     }
 }

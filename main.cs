@@ -5,7 +5,7 @@ namespace MainProject{
     class MainProgram {
         static void Main() {
             while(true){
-                Console.WriteLine("Enter a valid operation: ('add', 'strlen', 'multiply', 'divide', 'root', 'contains', 'subtract', 'exit')");
+                Console.WriteLine("Enter a valid operation: ('add', 'strlen', 'multiply', 'divide', 'root', 'contains', 'subtract', 'howmany', 'exit')");
                 string input = Console.ReadLine();
                 if(input.ToLower() == "add"){
                     Console.WriteLine("Input your first number:");
@@ -68,6 +68,15 @@ namespace MainProject{
                     int n9 = Convert.ToInt32(num9);
                     int cout7 = Basics.Subtract(n8, n9);
                     Console.WriteLine($"Your result is: {cout7}");
+                }
+                else if(input.ToLower() == "howmany"){
+                    Console.WriteLine("Input a string:");
+                    string str5 = Console.ReadLine();
+                    Console.WriteLine("Input a substring:");
+                    string str6 = Console.ReadLine();
+                    char str7 = Convert.ToChar(str6);
+                    int cout8 = Basics.HowMany(str5, str7);
+                    Console.WriteLine($"Your result is: {cout8}");
                 }
                 else if(input.ToLower() == "exit"){
                     Console.WriteLine("Exiting program...");
