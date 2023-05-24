@@ -5,7 +5,7 @@ namespace MainProject{
     class MainProgram {
         static void Main() {
             while(true){
-                Console.WriteLine("Enter a valid operation: ('add', 'strlen', 'multiply', 'divide', 'root', 'contains', 'subtract', 'howmany', 'exit')");
+                Console.WriteLine("Enter a valid operation: ('add', 'strlen', 'multiply', 'divide', 'root', 'contains', 'subtract', 'howmany', 'maxnum', 'exit')");
                 string input = Console.ReadLine();
                 if(input.ToLower() == "add"){
                     Console.WriteLine("Input your first number:");
@@ -77,6 +77,18 @@ namespace MainProject{
                     char str7 = Convert.ToChar(str6);
                     int cout8 = Basics.HowMany(str5, str7);
                     Console.WriteLine($"Your result is: {cout8}");
+                }
+                else if(input.ToLower() == "maxnum"){
+                    Console.WriteLine("Input 3 numbers");
+                    List<int> InputList = new List<int>();
+                    for(int i = 0;i<3;i++){
+                        Console.WriteLine($"Number {i}:");
+                        string inputstr = Console.ReadLine();
+                        int inputint = Convert.ToInt32(inputstr);
+                        InputList.Add(inputint);
+                    }
+                    int cout9 = Basics.MaxNum(InputList);
+                    Console.WriteLine($"Your result is: {cout9}");
                 }
                 else if(input.ToLower() == "exit"){
                     Console.WriteLine("Exiting program...");

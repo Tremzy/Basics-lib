@@ -53,5 +53,14 @@ namespace Basicsprogram {
             }
             return count;
         }
+        public static int MaxNum(List<int> x){
+            int max = 0;
+            for(int i=0;i<x.Count;i++){
+                if(x[i] > max){
+                    max = x[i];
+                }
+            }
+            return max;
+        }
     }
 }
