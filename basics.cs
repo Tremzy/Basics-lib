@@ -6,7 +6,7 @@ namespace Basicsprogram {
             int result = x + y;
             return result;
         }
-        public static int Strlen(string x) {
+        public static int StrLen(string x) {
             int result;
             result = x.Length;
             return result;
@@ -29,7 +29,7 @@ namespace Basicsprogram {
         public static bool Contains(string x, char y) {
             bool result = false;
             int count = 0;
-            for(int i = 0; i < Strlen(x);i++){
+            for(int i = 0; i < StrLen(x);i++){
                 char current = x[i];
                 if(current == y){
                     count++;
@@ -45,7 +45,7 @@ namespace Basicsprogram {
         }
         public static int HowMany(string x, char y){
             int count = 0;
-            for(int i=0;i<Strlen(x);i++){
+            for(int i=0;i<StrLen(x);i++){
                 char current = x[i];
                 if(current == y){
                     count++;
@@ -61,6 +61,29 @@ namespace Basicsprogram {
                 }
             }
             return max;
+        }
+        public static int MinNum(List<int> x){
+            int min = int.MaxValue;
+            for(int i = 0;i<x.Count;i++){
+                if(x[i] < min){
+                    min = x[i];
+                }
+            }
+            return min;
+        }
+        public static int AddAll(List<int> x){
+            int result = 0;
+            for(int i = 0;i<x.Count;i++){
+                result += x[i];
+            }
+            return result;
+        }
+        public static int SubtractAll(List<int> x){
+            int result = 0;
+            for(int i = 0;i < x.Count;i++){
+                result -= x[i];
+            }
+            return result;
         }
     }
 }
